@@ -1,0 +1,32 @@
+{
+  "name": "xing-ly",
+  "private": false,
+  "version": "0.0.4",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/xing-ly.umd.js",
+  "module": "./dist/xing-ly.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/xing-ly.es.js",
+      "require": "./dist/xing-ly.umd.js"
+    }
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.9",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vue-tsc": "^1.8.5"
+  }
+}
