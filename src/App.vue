@@ -1,9 +1,7 @@
 <script setup lang="ts">
+import xlGameMine from '@/components/xl-game-mines/index.vue'
 </script>
 
 <template>
-  <div></div>
+  <xl-game-mine></xl-game-mine>
 </template>
-
-<style scoped>
-</style>
