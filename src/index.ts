@@ -1,4 +1,4 @@
-import XlCanvasImage from './components/xlCanvasImage/index.vue'
+import XlCanvasImage from '@/components/xl-canvas-image/index.vue'
 
 export {
   XlCanvasImage
