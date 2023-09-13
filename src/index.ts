@@ -1,7 +1,8 @@
 import XlCanvasImage from '@/components/xl-canvas-image/index.vue'
 import XlGameMines from '@/components/xl-game-mines/index.vue'
 export {
-  XlCanvasImage
+  XlCanvasImage,
+  XlGameMines
 }
 
 export default {
