@@ -1,13 +1,13 @@
-import XlCanvasImage from '@/components/xl-canvas-image/index.vue'
-import XlGameMines from '@/components/xl-game-mines/index.vue'
-export {
-  XlCanvasImage,
-  XlGameMines
-}
+import XlCanvasImage from '@/packages/xl-canvas-image/index.vue'
+
+export const Components = [
+  XlCanvasImage
+]
 
 export default {
   install: function (app: any) {
-    app.component('xl-canvas-image', XlCanvasImage);
-    app.component('xl-game-mines', XlGameMines);
+    Components.forEach((component)=>{
+      app.component(component.name, component);
+    })
   }
 }

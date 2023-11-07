@@ -1,12 +1,17 @@
 {
   "name": "xing-ly",
   "private": false,
-  "version": "0.0.7",
+  "version": "0.0.13-alpha-0",
   "type": "module",
+  "author": {
+    "name": "xing403",
+    "email": "2983181595@qq.com",
+    "url": "https://github.com/xing403"
+  },
+  "homepage": "https://github.com/xing403/xing-ly",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "build": "vue-tsc && vite build"
   },
   "files": [
     "dist"
@@ -19,17 +24,25 @@
       "require": "./dist/xing-ly.umd.js"
     }
   },
+  "peerDependencies": {
+    "@iconify-json/mdi": "^1.1.54",
+    "@unocss/reset": "^0.55.7",
+    "unocss": "^0.55.7",
+    "vite": "^4.4.5"
+  },
   "dependencies": {
     "vue": "^3.3.4"
   },
   "devDependencies": {
+    "@unocss/reset": "^0.55.7",
     "@iconify-json/mdi": "^1.1.54",
     "@types/node": "^20.4.9",
-    "@unocss/reset": "^0.55.7",
     "@vitejs/plugin-vue": "^4.2.3",
     "typescript": "^5.0.2",
-    "unocss": "^0.55.7",
-    "vite": "^4.4.5",
     "vue-tsc": "^1.8.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xing403/xing-ly"
   }
 }
