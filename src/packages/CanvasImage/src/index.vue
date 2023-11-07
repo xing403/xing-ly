@@ -1,29 +1,21 @@
 <template>
   <div class="lx-canvas">
-    <canvas ref="canvas"
-      :width="width"
-      :height="height"
-      @mousedown="mousedown"
-      @mousemove="mousemove"
-      @mouseout="mouseout"
-      @mouseup="mouseup"
-      @wheel="wheel"
-      @contextmenu="contextmenu"
-    />
-    <slot name="info" v-bind="info"/>
+    <canvas ref="canvas" :width="width" :height="height" @mousedown="mousedown" @mousemove="mousemove"
+      @mouseout="mouseout" @mouseup="mouseup" @wheel="wheel" @contextmenu="contextmenu" />
+    <slot name="info" v-bind="info" />
     <div class="context-menu" :style="contextmenuStyle">
       <div @click="restoreScole">还原缩放</div>
     </div>
   </div>
 </template>
 <script setup lang="ts">
-import { ref, watch, toRef, computed, } from 'vue'
+import { ref, watch, toRef, computed, onMounted, } from 'vue'
 
 defineOptions({
   name: 'LxCanvasImage'
 })
 
-const emits = defineEmits(['mousedown', 'mousemove','imageLoaded', 'drawImage', 'mouseout', 'mouseup', 'wheel'])
+const emits = defineEmits(['mousedown', 'mousemove', 'imageLoaded', 'drawImage', 'mouseout', 'mouseup', 'wheel'])
 
 const props = withDefaults(defineProps<{
   imageUrl: string
@@ -32,12 +24,12 @@ const props = withDefaults(defineProps<{
   height?: number
   minScale?: number
   maxScale?: number
-}>(),{
+}>(), {
   auto: false,
   minScale: 0.1,
   maxScale: 10
 })
-const info = computed(()=> {
+const info = computed(() => {
   return {
     imageUrl: props.imageUrl,
     scale: canvasImage.value?.imgScale.toFixed(2),
@@ -90,7 +82,7 @@ function loadImg() {
   img.value.onload = function () {
     if (!canvas.value)
       throw 'canvas is null or undefined'
-    if(props.auto){
+    if (props.auto) {
       canvas.value.width = img.value.width
       canvas.value.height = img.value.height
     }
@@ -173,7 +165,7 @@ function wheel(event: any) {
   canvasImage.value.imgPos.x = (1 - canvasImage.value.imgScale) * newPos.x + (pos.x - newPos.x)
   canvasImage.value.imgPos.y = (1 - canvasImage.value.imgScale) * newPos.y + (pos.y - newPos.y)
   drawImage()
-  emits('wheel',{
+  emits('wheel', {
     old,
     now: canvasImage.value.imgScale
   })
@@ -201,7 +193,9 @@ function restoreScole() {
 watch(imageUrl, () => {
   init()
 })
-init()
+onMounted(() => {
+  init()
+})
 </script>
 <style>
 .lx-canvas {

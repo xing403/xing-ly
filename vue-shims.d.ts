@@ -5,7 +5,7 @@ declare module '*.vue' {
   const _default: Component
   export default _default
 }
-
+declare module 'xing-ly'
 declare interface Point {
   x: number
   y: number
