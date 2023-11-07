@@ -1,7 +1,13 @@
 <script setup lang="ts">
-import xlGameMine from '@/components/xl-game-mines/index.vue'
+
 </script>
 
 <template>
-  <xl-game-mine></xl-game-mine>
+  <div>
+    <LxCanvasImage image-url='http://ilstudy.vip/images/avatar.jpg' auto >
+      <template #info="scope">
+        {{ scope }}
+      </template>
+    </LxCanvasImage>
+  </div>
 </template>

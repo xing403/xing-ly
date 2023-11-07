@@ -1,13 +1,11 @@
-import XlCanvasImage from '@/packages/xl-canvas-image/index.vue'
+import Components from '@/packages/components'
 
-export const Components = [
-  XlCanvasImage
-]
+export const install = (app: any) => {
+  Components.forEach((component)=>{
+    app.component(component.name, component);
+  })
+}
 
 export default {
-  install: function (app: any) {
-    Components.forEach((component)=>{
-      app.component(component.name, component);
-    })
-  }
+  install
 }

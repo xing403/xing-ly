@@ -1,10 +1,10 @@
 import { createApp } from 'vue'
 import './assets/style.css'
 
-import '@unocss/reset/tailwind.css'
-import 'uno.css'
-
 import App from './App.vue'
+import XingLY from './index'
+const app = createApp(App)
 
-createApp(App)
-  .mount('#app')
+app.use(XingLY)
+
+app.mount('#app')
