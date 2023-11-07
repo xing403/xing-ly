@@ -1,7 +1,12 @@
 import Components from '@/packages/components'
+import ElementPlus from 'element-plus'
 
-export const install = (app: any) => {
-  Components.forEach((component)=>{
+import 'element-plus/dist/index.css'
+import 'element-plus/theme-chalk/dark/css-vars.css'
+
+const install = (app: any) => {
+  app.use(ElementPlus)
+  Components.map((component)=>{
     app.component(component.name, component);
   })
 }

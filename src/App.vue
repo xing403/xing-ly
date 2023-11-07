@@ -4,10 +4,6 @@
 
 <template>
   <div>
-    <LxCanvasImage image-url='http://ilstudy.vip/images/avatar.jpg' auto >
-      <template #info="scope">
-        {{ scope }}
-      </template>
-    </LxCanvasImage>
+    <XlQRCode text="hello world" download refresh />
   </div>
 </template>
