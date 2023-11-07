@@ -10,21 +10,15 @@
 </template>
 <script setup lang="ts">
 import { ref, watch, toRef, computed, onMounted, } from 'vue'
+import { CanvasImageType } from '../CanvasImageProps';
 
 defineOptions({
-  name: 'LxCanvasImage'
+  name: 'XlCanvasImage'
 })
 
 const emits = defineEmits(['mousedown', 'mousemove', 'imageLoaded', 'drawImage', 'mouseout', 'mouseup', 'wheel'])
 
-const props = withDefaults(defineProps<{
-  imageUrl: string
-  auto?: boolean
-  width?: number
-  height?: number
-  minScale?: number
-  maxScale?: number
-}>(), {
+const props = withDefaults(defineProps<CanvasImageType>(), {
   auto: false,
   minScale: 0.1,
   maxScale: 10

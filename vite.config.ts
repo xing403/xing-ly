@@ -11,19 +11,21 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     }
   },
-  build:{
-    lib:{
+  build: {
+    lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'xing-ly',
       fileName: (format) => `xing-ly.${format}.js`
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'element-plus'],
       output: {
         globals: {
-          vue: 'Vue'
+          vue: 'Vue',
+          'element-plus': 'ELementPlus'
         }
       }
     }
-  }
+  },
+
 })
