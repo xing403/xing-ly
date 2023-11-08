@@ -187,6 +187,12 @@ function restoreScole() {
 watch(imageUrl, () => {
   init()
 })
+watch(width, () => {
+  init()
+})
+watch(height, () => {
+  init()
+})
 onMounted(() => {
   init()
 })
