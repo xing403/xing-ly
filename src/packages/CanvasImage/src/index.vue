@@ -10,7 +10,7 @@
 </template>
 <script setup lang="ts">
 import { ref, watch, toRef, computed, onMounted, } from 'vue'
-import { CanvasImageType } from '../CanvasImageProps';
+import { CanvasImageType } from '../types/CanvasImageProps';
 
 defineOptions({
   name: 'XlCanvasImage'
@@ -221,3 +221,4 @@ onMounted(() => {
   color: #fff;
 }
 </style>
+../types/CanvasImageProps

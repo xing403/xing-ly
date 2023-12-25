@@ -31,7 +31,8 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "vue-shims.d.ts"
+    "vue-shims.d.ts",
+    "element-plus/global"
   ],
   "references": [
     {

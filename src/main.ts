@@ -1,8 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import XingLY from 'xing-ly'
-
-import 'xing-ly/dist/style.css'
+import XingLY from './index'
 
 import './assets/style.css'
 

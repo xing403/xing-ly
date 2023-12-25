@@ -1,7 +1,7 @@
 {
   "name": "xing-ly",
   "private": false,
-  "version": "0.0.14-alpha-0",
+  "version": "0.0.14-alpha-1",
   "type": "module",
   "license": "MIT",
   "author": {
@@ -12,7 +12,8 @@
   "homepage": "https://github.com/xing403/xing-ly",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build"
+    "build": "vue-tsc && vite build",
+    "test": "vitest"
   },
   "files": [
     "dist"
@@ -29,14 +30,12 @@
     "@vitejs/plugin-vue": "^4.2.3",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
+    "vitest": "^0.34.6",
     "vue-tsc": "^1.8.5"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/xing403/xing-ly"
-  },
-  "dependencies": {
-    "xing-ly": "0.0.13-alpha-7"
   },
   "exports": {
     ".": {
