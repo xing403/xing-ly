@@ -135,7 +135,3 @@ gernateQrCode()
   display: flex;
 }
 </style>
-<<<<<<< HEAD
-=======
-../types/QRCodeProps
->>>>>>> dev
