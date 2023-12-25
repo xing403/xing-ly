@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import QrCode from 'qrcode'
 import { ref, toRef } from 'vue'
-import type { QRCodePropsType } from '../QRCodeProps'
+import type { QRCodePropsType } from '../types/QRCodeProps'
 
 defineOptions({
   name: 'XlQRCode'
@@ -135,3 +135,7 @@ gernateQrCode()
   display: flex;
 }
 </style>
+<<<<<<< HEAD
+=======
+../types/QRCodeProps
+>>>>>>> dev

@@ -10,7 +10,7 @@
 </template>
 <script setup lang="ts">
 import { ref, watch, toRef, computed, onMounted, } from 'vue'
-import { CanvasImageType } from '../CanvasImageProps';
+import { CanvasImageType } from '../types/CanvasImageProps';
 
 defineOptions({
   name: 'XlCanvasImage'
@@ -187,6 +187,12 @@ function restoreScole() {
 watch(imageUrl, () => {
   init()
 })
+watch(width, () => {
+  init()
+})
+watch(height, () => {
+  init()
+})
 onMounted(() => {
   init()
 })
@@ -215,3 +221,4 @@ onMounted(() => {
   color: #fff;
 }
 </style>
+../types/CanvasImageProps
