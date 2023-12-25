@@ -77,5 +77,9 @@ async function handleLoad() {
   font-size: 0.5em;
   padding: 5px 0;
 }
+.infinite-load-empty{
+  text-align: center;
+  font-size: 1.2em;
+  padding: 2em;
+}
 </style>
-./infinite-load

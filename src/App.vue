@@ -38,12 +38,6 @@ function loadEnd() {
       <template #content="scope">
         <div>{{ scope }}</div>
       </template>
-      <template #loading>
-        <div>加载中000</div>
-      </template>
-      <template #end>
-        <div>结束啦</div>
-      </template>
     </xl-infinite-load>
   </div>
 </template>
