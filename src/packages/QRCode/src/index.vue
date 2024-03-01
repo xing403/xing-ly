@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import QrCode from 'qrcode'
-import { ref, toRef } from 'vue'
+import { nextTick, ref, toRef } from 'vue'
 import type { QRCodePropsType } from '../types/QRCodeProps'
 
 defineOptions({
@@ -87,8 +87,9 @@ function refreshQRCode(cancel?: boolean) {
   gernateQrCode()
   emits('refreshed', code.value)
 }
-
-gernateQrCode()
+nextTick(() => {
+  gernateQrCode()
+})
 
 </script>
 
@@ -135,4 +136,3 @@ gernateQrCode()
   display: flex;
 }
 </style>
-../types/QRCodeProps
